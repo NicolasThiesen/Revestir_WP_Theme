@@ -1,0 +1,11 @@
+{
+  "name": "revestir",
+  "version": "1.0.0",
+  "description": "Revestir wordpress theme ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nícolas Medeiros Thiesen",
+  "license": "ISC"
+}
