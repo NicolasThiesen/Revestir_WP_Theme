@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+.pswp__top-bar, .pswp__caption {
+  background: #AF0002 !important; }
+
 .carouser__title {
   background: rgba(46, 46, 46, 0.664);
   max-width: 500px;

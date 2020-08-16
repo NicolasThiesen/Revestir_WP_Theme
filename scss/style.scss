@@ -4,6 +4,9 @@ $primary: #AF0002;
 $theme-colors:(
     "primary": $primary
 );
+.pswp__top-bar, .pswp__caption{
+    background: $primary !important;
+}
 .carouser__title{
     background: rgba(46, 46, 46, 0.664);
     max-width: 500px;
