@@ -5,7 +5,7 @@ const { src } = require("gulp");
 gulp.task("sass", gulp.series(function(){
     return gulp.src(["node_modules/bootstrap/scss/*.scss", "scss/*.scss"])
     .pipe(sass())
-    .pipe(gulp.dest("../css"));
+    .pipe(gulp.dest("./css"));
 }));
 gulp.task("watch",gulp.series(function(){
     gulp.watch(["node_modules/bootstrap/scss/*.scss", "scss/*.scss"], gulp.parallel(["sass"]));

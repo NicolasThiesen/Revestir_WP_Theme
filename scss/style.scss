@@ -1,13 +1,225 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-@import "node_modules/bootstrap/scss/bootstrap";
-$primary: #AF0002;
 
-*{
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
+$primary: #AF0002;
+$theme-colors:(
+    "primary": $primary
+);
+.carouser__title{
+    background: rgba(46, 46, 46, 0.664);
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 2.5px 0;
+    border-radius: 3px;
+
+}
+.formulario_contato_bt{
+    background: $primary !important;
+    color: white !important;
 }
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
+.icon-rev{
+    width: 160px;
+}
+.social-icons{
+    font-size: 30px;
+}
+@media(max-width:500px){
+    .icon-rev{
+        width: 100px;
+    }
+    .social-icons{
+        font-size: 25px; 
+    }
+}
+$menu-width: 350px;
+$scene-width: 1000px;
+$scene-height: 400px;
+
+@keyframes slidein {
+  0% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  
+  100% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+}
+
+.scene {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: $scene-width;
+    height: $scene-height;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+                0 1px 2px rgba(0,0,0,0.24);
+    overflow: hidden;
+        
+    .left-zone {
+        background: white;
+        height: 75%;
+        flex-grow: 0;
+        display: flex;
+        width: $menu-width;
+        align-items: center;
+        justify-content: left;
+        
+        .list{
+            display: flex;
+            list-style: none;
+            
+            align-content: stretch;
+            flex-direction: column;
+            flex-grow: 1;
+            
+            margin: 0;
+            padding: 0;        
+            
+            & .item{
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                & .label__img{
+                    margin-left: 10px;
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+            li {
+                input[type="radio"] {
+                    
+                display: none;
+                & ~ label {
+                    display: block;
+                    opacity: 0.5;
+                    text-align: center;
+                    margin: auto;
+                    width: 100%;
+                    padding: 10px;
+                    &:first-letter {
+                        text-transform: uppercase;
+                    }
+                                
+                    &:hover {
+                    opacity: 0.75;
+                    cursor: pointer;
+                    }
+                    
+                }
+                    
+                & ~ .content {
+                    position: absolute;
+                    left: $menu-width;
+                    top: -$scene-height;
+                    width: $scene-width - $menu-width;
+                    height: $scene-height;
+                    
+                    animation-duration: 0.75s;
+                    animation-name: slideout;
+                    animation-timing-function: ease-out;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    
+                    h2 {
+                        &:first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                    p {
+                        max-width: 65%;
+                        text-align: center;
+                    }
+                }
+                
+                &:checked{
+                    & ~ label {
+                    opacity: 1;
+                    animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    }
+
+                    & ~ .content {
+                    animation-duration: 0.75s;
+                    animation-name: slidein;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    }
+                }
+                }   
+            }
+    }
+    }
+
+    .middle-border {
+        background-color: rgb(179, 179, 179);
+        height: 75%;
+        flex-grow: 1;
+        max-width: 2px;
+        z-index: 0;
+    }
+
+    .right-zone {
+        background: get-color(white);
+        height: 100%;
+        flex-grow: 3;
+    }
+}
+
+@media(max-width:"1200px"){
+    .scene{
+        width: 100%;
+        & .left-zone{
+            width: 35%;
+        }
+        & .content{
+            width: 70%!important;
+            left: 35%!important;
+        }
+    }
+}
+@media(max-width:"750px"){
+    .content{
+        & h2{
+            font-size: 17px!important;
+        }
+        & p{
+            font-size: 14px!important;
+        }
+    }
+}
+@media(max-width:"480px"){
+    .scene{
+        width: 100%;
+        & .left-zone{
+            width: 40%;
+            &  .list .item .label__img{
+                margin-top: 10px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
+@import "node_modules/bootstrap/scss/bootstrap";

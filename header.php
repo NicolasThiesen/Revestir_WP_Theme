@@ -21,14 +21,15 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-color-1">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
       
         <?php
           $custom_logo_id = get_theme_mod('custom_logo');
           $logo = wp_get_attachment_image_src($custom_logo_id, 'full');  
           if(has_custom_logo()){
-            echo '<a a class="navbar-brand ml-4" href="http://www.tintasrevestir.com.br">';
-            echo '<img src="'.esc_url($logo[0]) . '" width="160" height="40"  class="d-inline-block align-right">';
+            echo '<a a class="navbar-brand" href="http://www.tintasrevestir.com.br">';
+            echo '<img src="'.esc_url($logo[0]) . '" class="d-inline-block align-right icon-rev">';
             echo '</a>';
           }else{
             echo '<h1>'. get_bloginfo('name') . '</h1>';
@@ -55,5 +56,6 @@
             </li>
           </ul>
         </div>
+      </div>
     </nav>
 
