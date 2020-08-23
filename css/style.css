@@ -109,7 +109,7 @@ body {
           .scene .left-zone .list li input[type="radio"] ~ .content h2:first-letter {
             text-transform: uppercase; }
           .scene .left-zone .list li input[type="radio"] ~ .content p {
-            max-width: 65%;
+            max-width: 70%;
             text-align: center; }
         .scene .left-zone .list li input[type="radio"]:checked ~ label {
           opacity: 1;
@@ -148,12 +148,22 @@ body {
 @media (max-width: 480px) {
   .scene {
     width: 100%; }
+    .scene .label__item {
+      font-size: 12px; }
     .scene .left-zone {
       width: 40%; }
       .scene .left-zone .list .item .label__img {
-        margin-top: 10px;
-        width: 25px;
-        height: 25px; } }
+        margin: auto 0 auto 10px;
+        width: 15px;
+        height: 15px; }
+    .scene .content__img {
+      width: 100px;
+      height: 100px; }
+    .scene .content h2 {
+      font-size: 15px !important; }
+    .scene .content p {
+      max-width: 80% !important;
+      font-size: 12px !important; } }
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)

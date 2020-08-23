@@ -91,9 +91,9 @@
                       } }
                   ?>" ><?php the_title();?></label>
                 <div class="content content__item">
-                  <?php the_post_thumbnail( 'thumbnail' ); ?>
+                  <?php the_post_thumbnail( 'thumbnail', array("class"=>"content__img") ); ?>
                   <h2><?php the_title(); ?></h2>
-                  <p><?php the_content(); ?></p>
+                  <?php the_content("paragrath", array("class"=>"content__paragrath")); ?>
                 </div>
               </li>
               <?php endwhile; endif; ?>
