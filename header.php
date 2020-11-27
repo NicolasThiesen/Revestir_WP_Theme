@@ -28,7 +28,7 @@
           $custom_logo_id = get_theme_mod('custom_logo');
           $logo = wp_get_attachment_image_src($custom_logo_id, 'full');  
           if(has_custom_logo()){
-            echo '<a a class="navbar-brand" href="http://www.tintasrevestir.com.br">';
+            echo '<a a class="navbar-brand" href="'; echo get_site_url( null, '', null );echo '">';
             echo '<img src="'.esc_url($logo[0]) . '" class="d-inline-block align-right icon-rev">';
             echo '</a>';
           }else{
