@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-      <div class="col-md-10 mx-auto">
+      <div class="col-md-10 mx-auto mt-4">
         <div id="carousel-site" class="carousel slide" data-ride="carousel" data-interval="6000">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
