@@ -1,6 +1,5 @@
-<?php /*Template name: Sem Carousel */ ?>
+<?php /*Template name: Modelo Sem Contêner */ ?>
 <?php get_header(); ?>
-    <div class="container">
         <h1 class="text-center my-4"><?php the_title() ?></h1>
         <div class="col-md-10 mx-auto">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -9,5 +8,4 @@
             <p>Sem posts criados.</p>
         <?php endif; ?>
         </div>
-    </div>
 <?php get_footer(); ?>
