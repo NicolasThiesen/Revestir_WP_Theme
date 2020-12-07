@@ -63,13 +63,16 @@
              <span class="sr-only">Próximo</span>
            </a>
         </div>
-        <div class="scene mt-5">
+        <h3 class="mt-5 text-center">Linhas</h3>
+        <div class="scene mt-4">
           <div class="left-zone">
             <ul class="list">
               <?php
                 $args_products_banner = array(
                   'post_type' => 'products banners',
                   'posts_per_page' => 5,
+                  'orderby' => 'date',
+                  'order'   => 'ASC',
                 );
                 $query_products = new WP_Query ($args_products_banner);
               ?>
@@ -80,7 +83,7 @@
                 ?>
               <li class="item">
                   <input type="radio" id="<?php the_title(); ?>" name="li_item" <?php $c++; if($c===1){echo 'checked';} ?>/>
-                  <?php the_post_thumbnail('shop_thumbnail',array('class'=>'label__img')); ?> 
+                  <?php the_post_thumbnail('product_banner_size',array('class'=>'label__img')); ?> 
                   <label class="label__item" for="<?php the_title();?>" style="<?php 
                     if(empty($_POST[$name])){ 
                       $args = get_post_custom_values('color'); 
@@ -91,7 +94,7 @@
                       } }
                   ?>" ><?php the_title();?></label>
                 <div class="content content__item">
-                  <?php the_post_thumbnail( 'thumbnail', array("class"=>"content__img") ); ?>
+                  <?php the_post_thumbnail( 'product_banner_size', array("class"=>"content__img") ); ?>
                   <h2><?php the_title(); ?></h2>
                   <?php the_content("paragrath", array("class"=>"content__paragrath")); ?>
                 </div>

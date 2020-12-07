@@ -4,6 +4,7 @@ $primary: #AF0002;
 $theme-colors:(
     "primary": $primary
 );
+
 .pswp__top-bar, .pswp__caption{
     background: $primary !important;
 }
@@ -104,8 +105,8 @@ $scene-height: 400px;
                 align-content: center;
                 & .label__img{
                     margin-left: 10px;
-                    width: 55px;
-                    height: 55px;
+                    width: 20%;
+                    height: 20%;
                 }
             }
             li {
@@ -145,7 +146,6 @@ $scene-height: 400px;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    
                     h2 {
                         &:first-letter {
                             text-transform: uppercase;

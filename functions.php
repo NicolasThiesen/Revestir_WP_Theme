@@ -59,6 +59,7 @@ function create_post_type(){
 
 //Criar o tipo de post para o banner de produtos
 function create_products_banners(){
+    add_image_size( 'product_banner_size', 137, 150 );
     register_post_type('products banners',
         //definir as opcoes
         array(

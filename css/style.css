@@ -77,8 +77,8 @@ body {
         align-content: center; }
         .scene .left-zone .list .item .label__img {
           margin-left: 10px;
-          width: 55px;
-          height: 55px; }
+          width: 20%;
+          height: 20%; }
       .scene .left-zone .list li input[type="radio"] {
         display: none; }
         .scene .left-zone .list li input[type="radio"] ~ label {
